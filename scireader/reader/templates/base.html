@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SciReader5000</title>
+  <meta name="description" content="SciReader5000">
+  <meta name="Jake Zimbric" content="Educational Readings">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% load  static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'reader/style.css' %}">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand active" href="#">READMORE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Article Library</a></li>
+      <li><a href="#">Reader</a></li> 
+      <li><a href="#">About</a></li> 
+    </ul>
+  </div>
+</nav>
+
+  <div class="jumbotron1">
+    
+  </div>
+
+
+<p class = "stupid">
+	Hello, World!
+
+	There are {{ count }} articles uploaded!
+
+</p>
+
+	<div class = "row">
+	{% for article in articles %}
+		<div class ="col-sm-4 well">
+				<h1>{{ article.title }}</h1>
+				<p> {{ article.author }}</p>
+				<p> {{ article.id }} </p>
+				
+					{% for body in bodies %}
+						{% if body.article == article %}
+							<p>{{ body.body }}</p>
+							<p> {{ body.lexile }}</p>
+					    {% endif %}
+					{% endfor %}
+				<p> {{ article.subject }} </p>
+		</div>
+		{% endfor %}
+	</div>
+
+
+
+
+
+  <script src="js/scripts.js"></script>
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

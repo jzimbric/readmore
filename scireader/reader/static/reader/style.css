@@ -1,0 +1,51 @@
+
+* {
+	font-family: "Time New Roman", Times, serif;
+}
+
+.well {
+	background-color: #FEFCF4
+}
+p {
+	font-size: 18px;
+	line-height: 36px;
+}
+.jumbotron1 {
+  padding: 50px 15px;
+  background-color: #f9f9f9;
+  color: black;
+  text-align: center;
+  height: 300px;
+  background-size: cover;
+  background-image: url("Nautilus_Labyrinth.png")
+}
+
+.stupid {
+	background-color: black;
+	color: white;
+}
+
+
+button.lexile {
+    background-color: #442084;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: list-item;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+ }
+
+button.lexile:hover {
+	background-color: #542E98;
+}
+
+.right-side-bar {
+	float: right;
+	display: block;
+}

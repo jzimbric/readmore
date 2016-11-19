@@ -1,0 +1,103 @@
+ <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>SciReader5000</title>
+  <meta name="description" content="SciReader5000">
+  <meta name="Jake Zimbric" content="Educational Readings">
+{% load  static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'reader/style.css' %}">
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand active" href="/">READMORE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Article Library</a></li>
+      <li><a href="#">Reader</a></li> 
+      <li><a href="#">About</a></li> 
+    </ul>
+  </div>
+</nav>
+
+
+
+
+<p class = "stupid">
+	Hello, World!
+
+	There are {{ count }} articles uploaded!
+
+</p>	
+		
+
+		
+	<div class="well right-side-bar new-words">
+				<h3>New Words</h3>
+			</div>		
+	<div class="container">
+			<div class="well right-side-bar">
+				<h3>Lexile</h3>
+			
+				 	{% for l in body %}
+			 
+			 			<button type="button" class="lexile" id="lexile-{{l.lexile}}"> {{ l.lexile }}</button>
+			
+			 		{% endfor %}
+			 	<h4> Font Size </h3>
+			 	<button type="button" class="font">+</button>
+			 	<button type="button" class="font-size--">--</button>
+			 </div>
+
+
+	
+	
+		<div class ="well">
+				<h1>{{ article.title }}</h1>
+				<p> {{ article.author }}</p>
+				{% for b in body %}
+				<p class = "lexile-picker well clickable" id="lexile-{{b.lexile}}"> {{ b.body }} </p>
+				{% endfor %}
+				<p> Article ID: {{ article.id }} </p>
+				<p> Subject: {{ article.subject }} </p>
+		</div>
+		<div class="well">
+			<h3>Wiktionary</h3>
+			<p id="article"></p>
+		
+		</div>
+		<div class="well">
+			<h3>Wiki Entry</h3>
+			<p id="article2"></p>
+		
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+  <script src="{% static 'reader/javascript.js' %}"></script>
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
