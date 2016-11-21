@@ -120,5 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_ROOT = '/home/jzimbric/Documents/DjangoDev/scireader/reader/static/reader/img/'
-MEDIA_URL = "http://localhost:8000/static/"
+STATIC_ROOT = '/home/jzimbric/Documents/DjangoDev/scireader/reader/static/'

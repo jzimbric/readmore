@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from reader import views 
+from reader import views
+
 
 
 urlpatterns = [
