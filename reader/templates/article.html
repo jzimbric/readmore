@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{%block featured %}{%endblock%}
+{%block carousel %}{%endblock%}
+{%block library %}
+	<div class="spacer">
+	<div>
+		
+	<div class="well new-words left-side-bar">
+				<h3>New Words</h3>
+			</div>		
+	<div class="container-fluid article">
+			<div class="well right-side-bar">
+				<h3>Lexile</h3>
+			
+				 	{% for l in body %}
+			 
+			 			<button type="button" class="lexile" id="lexile-{{l.lexile}}"> {{ l.lexile }}</button>
+			
+			 		{% endfor %}
+			 	<h4> Font Size </h3>
+			 	<button type="button" class="font">+</button>
+			 	<button type="button" class="font-size--">--</button>
+			 </div>
+
+
+	
+	
+		<div class ="well">
+		<div class = "feature well">
+				<h1>{{ article.title }}</h1>
+				</div>
+				<p> {{ article.author }}</p>
+	
+				{% for b in body %}
+				<p class = "lexile-picker well clickable" id="lexile-{{b.lexile}}"> {{ b.body }} </p>
+				{% endfor %}
+				<p> Article ID: {{ article.id }} </p>
+				<p> Subject: {{ article.subject }} </p>
+		</div>
+		<div class="well">
+			<h3>Wiktionary</h3>
+			<p id="article"></p>
+		
+		</div>
+		<div class="well">
+			<h3>Wiki Entry</h3>
+			<p id="article2"></p>
+		
+		</div>
+
+	</div>
+	{% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{%block featured %}{%endblock%}
+{%block carousel %}{%endblock%}
+{% block library %}
+
+<div class = "container-fluid article">
+
+<div class="right-side-bar">
+<h3> Subjects </h3>
+	
+	
+	{% for article in subjects %}
+		
+				<button type="button" class="lexile">{{ article }}</button>
+				
+		
+		{% endfor %}
+	</div>
+	
+
+
+
+<div class = "page-header">
+<h1> SCIENCE </h1>
+</div>
+	<div class = "row">
+	
+	{% for article in science %}
+		<div class = "{{article.subject}}">
+		<div class ="col-lg-3 well library">
+				<h3>{{ article.title }}</h3>
+				<p> {{ article.author }}</p>
+				<p> {{article.blurb}} </p>
+				<a href="/{{article.id}}/reader/">read more...</a>
+		</div>
+		</div>
+		{% endfor %}
+	</div>
+
+<div class = "page-header">
+<h1> ENGLISH </h1>
+</div>
+	<div class = "row">
+	
+	{% for article in english %}
+		<div class ="col-lg-3 well library">
+				<h3>{{ article.title }}</h3>
+				<p> {{ article.author }}</p>
+				<p> {{article.blurb}} </p>
+				<a href="/{{article.id}}/reader/">read more...</a>
+		</div>
+
+		{% endfor %}
+	</div>
+
+<div class = "page-header">
+<h1> HISTORY </h1>
+</div>
+	<div class = "row">
+	
+	{% for article in history %}
+		<div class ="col-lg-3 well library">
+				<h3>{{ article.title }}</h3>
+				<p> {{ article.author }}</p>
+				<p> {{article.blurb}} </p>
+				<a href="/{{article.id}}/reader/">read more...</a>
+		</div>
+
+		{% endfor %}
+	</div>
+
+
+
+
+	{%endblock%}
+

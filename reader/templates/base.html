@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>READMORE</title>
+  <meta name="description" content="READMORE">
+  <meta name="Jake Zimbric" content="Educational Readings">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+{% load  static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'reader/style.css' %}">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	
+{% block jumbotron %}
+  <div class="jumbotron1">
+
+    
+  </div>
+{% endblock %}
+<nav class="navbar navbar-inverse featured menu">
+  <div class="fluid-container">
+    <div class="navbar-header">
+      <a class="navbar-brand active" href="/">READMORE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/library/">Article Library</a></li>
+      <li><a href="/search_results/">Search</a></li> 
+      <li><a href="#">About</a></li> 
+    </ul>
+  </div>
+</nav>
+{% block carousel %}
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="/static/reader/girl_reading.jpg" alt="...">
+      <div class="carousel-caption">
+        <h3>Reading is Fun!</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x315" alt="...">
+      <div class="carousel-caption">
+        <h3>It just couldn't get any better!</h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="http://placehold.it/1200x315" alt="...">
+      <div class="carousel-caption">
+        <h3>This is how good you could have it!</h3>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel -->
+{% endblock %}
+  
+
+
+{%block featured %}
+<div class="fluid-container">
+  <div class="row">
+    <div class="col-md-6 well">
+       <div class="well feature">
+      <h2>Featured Article of the Month</h2>
+      </div>
+
+      <h3> {{ featured.title }}</h3>
+     <p> {{ featured.blurb }}</p>
+     <a href="{{featured.id}}/reader/">read it here!</a>
+    </div>
+    <div class="col-md-4 well">
+      <img src="{% static 'reader/book.jpg' %}" class="img-circle " width="400" height="313">
+    </div>
+    </div>
+</div>
+{%endblock%}
+
+
+
+{% block library %}
+{% endblock %}
+
+
+
+ 
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="{% static 'reader/javascript.js' %}"></script>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

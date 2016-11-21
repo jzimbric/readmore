@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{%block featured %}{%endblock%}
+{%block library %}
+<div class="fluid-container article">
+<form method="get" action="/search_results/">
+          
+
+<label for="id_q">Search:</label>
+           <input type="text" name="q" id="id_q"/>
+           <input class="lexile" type="submit" value="Submit"/>
+
+
+        </form>
+ You searched for "{{ query_string }}" and the results are listed below.
+ {{ found_entries }}
+<ul>
+{% for e in found_articles %}
+	
+           <li><a href="/{{ e.id }}/reader/"> {{ e.title }} </li>
+{% endfor %}
+
+</ul>
+</div>
+ {%endblock%}

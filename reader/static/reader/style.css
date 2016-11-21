@@ -1,0 +1,156 @@
+/*
+Colors:
+paper: #f4f4f4
+silk: #DCD0co
+charcoal: #373737;
+puregold: #cob283;
+lavendar: #6d7993;
+eggplant: 49274a;
+cerulean: #4484ce;
+*/
+
+
+* {
+	font-family: "Times New Roman", Times, serif;
+}
+.well {
+  padding: 25px;
+  margin: 25px;
+  background-color: #f9f9f9;
+  border-color: transparent;
+-webkit-box-shadow: -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+-moz-box-shadow:    -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+box-shadow:         -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+}
+h1 {
+  font: 30px/30px Times, serif;
+  text-align: center;
+}
+
+h2 {
+  font: 18px/20px Times, serif;
+  text-align: center;
+}
+body {
+  background-color: #F9f9f9;
+}
+.article {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 25px;
+
+}
+
+.container{
+  background-color: #f9f9f9;
+}
+.fluid-container{
+  background-color: #f9f9f9;
+}
+.featured {
+	background-color: #373737;
+  color: #f4f4f4;
+
+  
+}
+p {
+	font-size: 14px;
+	line-height: 36px;
+}
+.jumbotron1 {
+  padding: 50px 15px;
+  background-color: #f9f9f9;
+  color: black;
+  text-align: center;
+  height: 150px;
+  background-size: cover;
+  background-image: url("Nautilus_Labyrinth.png")
+}
+
+.stupid {
+	background-color: black;
+	color: white;
+}
+
+
+button.lexile {
+    background-color: #4484ce;
+    color: #f4f4f4;
+    border: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    display: list-item;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-shadow: -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+    -moz-box-shadow:    -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+     box-shadow:         -1px 0px 15px 0px rgba(50, 50, 50, 0.54);
+
+ }
+
+button.lexile:hover {
+	background-color: #542E98;
+}
+
+.right-side-bar {
+
+  overflow-y: auto;
+  position: absolute;
+  height: 100%;
+  right: 50px;
+
+  width: 100px;
+  
+ }
+.left-side-bar {
+  overflow-y: auto;
+  margin-left: -250px;
+  left: 250px;
+  position: fixed;
+  z-index: 1000;
+
+}
+.subjects {
+  background-color: #4484ce;
+  color: #f4f4f4;
+  margin-left: auto;
+  margin-right: auto;
+}
+.library {
+
+  background-color: #373737;
+  color: #f4f4f4;
+
+}
+
+.sticky {
+    position:fixed;
+    top:0;
+}
+.navbar {
+  border-color: transparent;
+  -webkit-box-shadow: -1px 0px 10px 0px rgba(50, 50, 50, 0.54);
+-moz-box-shadow:    -1px 0px 10px 0px rgba(50, 50, 50, 0.54);
+box-shadow:         -1px 0px 10px 0px rgba(50, 50, 50, 0.54);
+z-index: 1000;
+}
+
+span{
+  background-color: #373737;
+  color: #f9f9f9;
+}
+.feature{
+
+  background-color: #49274a;
+  color: #f9f9f9;
+  width: 50%;
+  position: relative;
+  text-align: center;
+  line-height: 0px;
+  padding: 1px 2px 1px 10px;
+  margin: -50px 0 0 0px;
+
+}
